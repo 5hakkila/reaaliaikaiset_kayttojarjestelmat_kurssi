@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -pthread
+CFLAGS = -g -Wall -pthread `mysql_config --cflags --libs`
 
 project: main.o bcm2835.o
 	$(CC) -o project main.o bcm2835.o $(CFLAGS)
